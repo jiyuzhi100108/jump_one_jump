@@ -8,6 +8,8 @@ __author__ = 'Erimus'
 可以防止被ban(从抓包数据看没有返回Error)。
 '''
 
+keytime=int(input("请输入关键时间（起始值为零，屏幕越大，输入数字越大）"))
+
 import os
 import sys
 import subprocess
@@ -169,7 +171,7 @@ def jump(piece_x, board_x, im, swipe_x1, swipe_y1):
         y1=swipe_y1,
         x2=swipe_x1 + random.randint(-10, 10),  # 模拟位移
         y2=swipe_y1 + random.randint(-10, 10),
-        duration=press_time+10
+        duration=press_time+keytime
     )
     os.system(cmd)
 
